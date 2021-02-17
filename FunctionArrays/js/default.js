@@ -44,13 +44,19 @@ function numOfTimes(theArray, theNumber){     // Return the number of times theN
 function indexOfLast(theArray, theNumber){
     let indexOfLast = -1;
     // Return the index of theArray where theNumber is found the last time
-    // return -1 if not found
-    return indexOfLast;
+    // return -1 if not found - try with for loop
+    indexofLast = theArray.lastIndexOf(theNumber); 
+    return indexofLast;
 }
 
 function largestNumber(theArray){
     let largestNumber; // not zero, because an array of negative numbers could create problems
     // return the largest number of the array - for loop
+    for (let i = 0; i < theArray.length; i++){
+        if (theArray[i] > largestNumber) {
+            largestNumber = theArray[i];
+        }
+    }
     return largestNumber;
 }
 
@@ -58,5 +64,10 @@ function removeDuplicates(theArray){
     let newArray = [];
     //Return an array that contains all the number of the first array
     // but remove any duplicates. Create new array, only adding numbers that aren't duplicates.
+    for (var i in theArray){
+        if(newArray.indexOf(theArray[i]) === -1){
+            newArray.push(theArray[i]);
+        }
+    }
     return newArray;
 }
