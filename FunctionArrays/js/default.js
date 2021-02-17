@@ -50,7 +50,7 @@ function indexOfLast(theArray, theNumber){
 }
 
 function largestNumber(theArray){
-    let largestNumber; // not zero, because an array of negative numbers could create problems
+    let largestNumber = theArray[0]; // not zero, because an array of negative numbers could create problems
     // return the largest number of the array - for loop
     for (let i = 0; i < theArray.length; i++){
         if (theArray[i] > largestNumber) {
