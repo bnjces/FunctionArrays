@@ -24,15 +24,20 @@ function printArray(theArray){
 function sumArray(theArray){      // Sum up all the numbers in theArray and return
     let sum = 0;
     let output = "";
-    for(let i=0; i < theArray.length; i++){
-        sum += theArray[i]
+    for(let i = 0; i < theArray.length; i++){
+        sum += theArray[i];
     }
     return sum;
 }
 
-function numOfTimes(theArray, theNumber){
+function numOfTimes(theArray, theNumber){     // Return the number of times theNumber is in the theArray
     let numOfTimes = 0;
-    // Return the number of times theNumber is in the theArray
+    let output = "";
+    for(let i = 0; i < theArray.length; i++){
+        if(theArray[i] == theNumber){
+            numOfTimes++;
+        }
+    }
     return numOfTimes;
 }
 
