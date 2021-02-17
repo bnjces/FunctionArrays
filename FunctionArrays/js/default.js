@@ -49,8 +49,8 @@ function indexOfLast(theArray, theNumber){
     // return indexofLast; // <-- this is the easy way, now w/ for loop:
     for(let i = 0; i < theArray.length; i++){
        if(theArray[i] === theNumber){
-           return i;
-       } 
+           indexOfLast = i;
+       }
     }
     return indexOfLast;
 }
