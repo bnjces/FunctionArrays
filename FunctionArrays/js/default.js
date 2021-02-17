@@ -45,11 +45,14 @@ function indexOfLast(theArray, theNumber){
     let indexOfLast = -1;
     // Return the index of theArray where theNumber is found the last time
     // return -1 if not found - try with for loop
-    indexofLast = theArray.lastIndexOf(theNumber); 
-    return indexofLast; // <-- this is the easy way, now w/ for loop:
-    // for(let i = 0; i < theArray.length; i++){
-    //    if
-    // }
+    //indexofLast = theArray.lastIndexOf(theNumber); 
+    // return indexofLast; // <-- this is the easy way, now w/ for loop:
+    for(let i = 0; i < theArray.length; i++){
+       if(theArray[i] === theNumber){
+           return i;
+       } 
+    }
+    return indexOfLast;
 }
 
 function largestNumber(theArray){
