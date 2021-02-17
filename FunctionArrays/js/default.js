@@ -21,9 +21,12 @@ function printArray(theArray){
     return output;
 }
 
-function sumArray(theArray){
+function sumArray(theArray){      // Sum up all the numbers in theArray and return
     let sum = 0;
-    // Sum up all the numbers in theArray and return
+    let output = "";
+    for(let i=0; i < theArray.length; i++){
+        sum += theArray[i]
+    }
     return sum;
 }
 
@@ -41,14 +44,14 @@ function indexOfLast(theArray, theNumber){
 }
 
 function largestNumber(theArray){
-    let largestNumber;
-    // return the largest number of the arrary
+    let largestNumber; // not zero, because an array of negative numbers could create problems
+    // return the largest number of the array - for loop
     return largestNumber;
 }
 
 function removeDuplicates(theArray){
     let newArray = [];
     //Return an array that contains all the number of the first array
-    // but remove any duplicates.
+    // but remove any duplicates. Create new array, only adding numbers that aren't duplicates.
     return newArray;
 }
