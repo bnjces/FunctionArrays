@@ -39,10 +39,10 @@ function highScoreEach(testScores){
     //Return an array that contains all the students with their high score
 	for(let i = 0; i < testScores.length; i++){
 		newArray[i] = [];
-		newArray[i][0] = testScores[i][0];
-		let highScore = 0;
-		for(let j = 1; j < testScores[i].length; j++){
-			if(highScore < testScores[i][j]){
+		newArray[i][0] = testScores[i][0]; 	// retrieves the name from the array
+		let highScore = 0; 					//
+		for(let j = 1; j < testScores[i].length; j++){ // j starts at 1 so as not to include student names
+			if(highScore < testScores[i][j]){		
 				highScore = testScores[i][j];
 			}
 		}
@@ -54,6 +54,17 @@ function highScoreEach(testScores){
 function lowScoreEach(testScores){
     let newArray = [];
     //Return an array that contains all the students with their low score
+	for(let i = 0; i < testScores.length; i++){
+		newArray[i] = [];
+		newArray[i][0] = testScores[i][0]; 
+		let lowScore = testScores[i][1];	// initially set to 101, reset in case teacher has things worth 1000?
+		for(let j = 1; j < testScores[i].length; j++){
+			if(lowScore > testScores[i][j]){
+				lowScore = testScores[i][j];
+			}
+		}
+		newArray[i][1] = lowScore;
+	}
    return newArray;
 }
 
