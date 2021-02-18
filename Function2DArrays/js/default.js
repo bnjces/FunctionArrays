@@ -70,12 +70,32 @@ function lowScoreEach(testScores){
 
 function sumScoreEach(testScores){
     let newArray = [];
-    //Return an array that contains all the students with their sum of thier scores
+    //Return an array that contains all the students with their sum of their scores
+	for(let i = 0; i < testScores.length; i++){
+		newArray[i] = [];
+		newArray[i][0] = testScores[i][0]; 
+		let sumScore = 0;
+		for(let j = 1; j < testScores[i].length; j++){
+			sumScore += testScores[i][j];
+		}
+		newArray[i][1] = sumScore;
+	}
    return newArray;
 }
 
 function avgScoreEach(testScores){
     let newArray = [];
-    //Return an array that contains all the students with their average of thier scores
+    //Return an array that contains all the students with their average of their scores
+	for(let i = 0; i < testScores.length; i++){
+		newArray[i] = [];
+		newArray[i][0] = testScores[i][0]; 
+		let avgScore = 0;
+		let sum = 0;
+		for(let j = 1; j < testScores[i].length; j++){
+			sum += testScores[i][j];
+		}
+		avgScore = sum / (testScores[i].length - 1); 	// subtract 1 to remove name being counted
+		newArray[i][1] = avgScore;
+	}
    return newArray;
 }
