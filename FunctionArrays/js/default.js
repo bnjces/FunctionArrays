@@ -1,3 +1,6 @@
+// Restriction: all below functions must use a for loop.
+
+
 function startup(){
     var output = "";
     var theArray = [5, 10, 5, 3, 1, 3, 6, 2, 3, 4]
@@ -66,13 +69,33 @@ function largestNumber(theArray){
     return largestNumber;
 }
 
-function removeDuplicates(theArray){
+/* function removeDuplicates(theArray){    removed: solve w/o built-in methods
     let newArray = [];
     //Return an array that contains all the number of the first array
     // but remove any duplicates. Create new array, only adding numbers that aren't duplicates.
     for (var i in theArray){
         if(newArray.indexOf(theArray[i]) === -1){
             newArray.push(theArray[i]);
+        }
+    }
+    return newArray;
+}
+*/
+function removeDuplicates(theArray){
+    let newArray = [];
+    //Return an array that contains all the number of the first array
+    // but remove any duplicates. Create new array, only adding numbers that aren't duplicates.
+    for(let i = 0; i < theArray.length; i++){
+        let value = theArray[i];
+        let found = false; // if duplicate is found in array
+        for(let j = 0; j < newArray.length; j++){
+           if(value === newArray[j]){
+                found = true;
+                break;
+           } 
+        }
+        if(!found){
+            newArray[newArray.length] = value;
         }
     }
     return newArray;
